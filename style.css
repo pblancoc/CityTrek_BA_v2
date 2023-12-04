@@ -1,0 +1,520 @@
+/* Estilos generales */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #00AEEF; /* Celeste */
+    color: #FFFFFF; /* Blanco */
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /*saca la la linea del link*/
+}
+
+h1,h2,h3{
+    margin: 0 0 2px 0;
+}
+
+h1{
+    font-size: 50px; 
+    white-space: pre-wrap;   
+    text-align: center;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #0033A0; /* Azul oscuro */
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+} */   
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FFFFFF; /* Blanco */
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #00AEEF; /* Celeste */
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #0033A0; /* Azul oscuro */
+    border: 1px solid #00AEEF; /* Celeste */
+}
+
+.menu li:hover .submenu {
+    display: block;
+    width: 200px;
+    text-align: left;
+}
+
+.submenu li {
+    margin: 2px 0;
+}
+
+.submenu a {
+    color: #00AEEF; /* Celeste */
+}
+
+/* Contenido principal */
+/*.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+} */
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.category {
+    width: 300px;
+    background-color: #FFFFFF; /* Blanco */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #00AEEF; /* Celeste */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+    color: #0033A0; /* Azul oscuro */
+}
+
+.category:hover {
+    transform: scale(1.05);
+}
+
+.category img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Datos Lugar */
+ul li {
+    margin-bottom: 10px;
+    /* color: #0033A0; */
+    font-weight: bold;
+}
+  
+ul li span {
+    font-weight: bold;
+    color: #FFFFFF; 
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #0033a0; /* Azul oscuro */
+    color: #FFFFFF; /* Blanco */
+    padding: 10px;
+}
+
+
+/* Boton de Whatsapp Web */
+
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+    color: #FFF;
+}
+
+
+/* Redes Sociales del Footer */
+
+
+.redes p {
+    text-align: justify;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+        
+}
+
+.redes a {
+    font-size: 30px;
+    transition: all ease 300ms;
+    
+}
+
+.redes img {
+    width: 30px;
+    height: 30px;
+}
+
+.fa fa-facebook {
+    color: blue;
+   
+}
+
+
+.fa fa-whatsapp {
+    color: green;
+}
+
+.redes a:hover{
+    transform: scale(1.2);
+    
+}
+
+
+/* Estilo a Iframe de Google */
+/* 
+#app {
+    float: left;
+    margin-top: 150px;
+    margin-left: 120px;
+}
+*/
+
+.Iframemaps {
+    padding: 5px;
+    padding-left: 42px;
+    /*float: right;
+    margin-top: 150px;
+    margin-right: 150px;
+    width: 700px;
+    height: 400px;*/
+}
+
+/* Nosotros */
+.parrafo {
+    font-family: 'Quicksand', sans-serif; /* Utiliza la fuente Quicksand que cargaste desde Google Fonts */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espacio entre líneas */
+    color: #FFF; /* Color de texto */
+    margin-bottom: 20px; /* Espacio inferior entre párrafos */
+    padding-left: 10px;
+}
+
+.integrantes {
+    padding-left: 10px;
+}
+
+.lista {
+    list-style: square;
+}
+
+.integrante {
+    color: #FFF;
+}
+
+/* Estilos responsivos para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    /*.submenu {
+        position: static;
+        display: none;
+    }*/
+
+    .category {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .categorias {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 5px; /* Espacio entre los elementos */
+        padding: 5px;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+        max-width: 768px; /* Ajusta el ancho máximo según sea necesario */
+        margin: 0 auto; /* Centra el contenedor en la página */
+    }    
+}
+
+/*Botones de listado telefonos */
+button{
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: #0033A0;
+}
+
+button:hover{
+    background-color: rgb(101, 33, 165);
+}
+
+.listado{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.telefonos {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.telefono{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+/* Boton de Whatsapp para pantallas pequeñas */
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+
+
+.redes a {
+    width:10px;
+    height:10px;
+    line-height: 10px;
+}
+
+}
+
+
+/* ----------- Página de contacto ----------- */
+#contactpage {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 2% 15%;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #00AEEF;
+    color: #FFFFFF;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+}
+
+#title {
+    grid-column: 1 / span 2; 
+}
+
+#formulario {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;    
+    width: 500px;
+}
+
+#sidebar {
+    grid-column: 2 / span 1; 
+    grid-row: 2 / span 1;  
+}
+
+#contactpage input, textarea {
+    background-color: rgb(241, 248, 248);
+    border: none;
+    padding: 7px;
+    margin: 5px 0px;
+    width: 97%;
+    display: flex;
+    font-family: quicksand;
+}
+
+fieldset {
+    border: none;
+}
+
+#sidebar img {
+    width: 35px;
+}
+
+#sidebar li {
+    list-style-type: none;
+    padding: 15px 0px;
+    line-height: 150%;
+}
+
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    #title {
+        padding: 5% 0%;
+    }
+    #contactpage {
+        display: grid;
+        grid-template-columns: 1fr 0fr;
+        justify-items: center;
+        padding: 1% 1%;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    #title {
+        grid-column: 1 / span 1;
+    }
+    
+    #formulario {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;    
+        width: 100%;
+    }
+    
+    #sidebar {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        width: 100%;
+        text-align: center;
+    }
+#sidebar img {
+    display: none;
+}
+
+}
+/* ----------- Fin página de contacto ----------- */
+
+/* ------- inicio responsive navbar ------- */
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #0033A0;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar .menu {
+display: flex;
+flex-direction: column;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+li.menu-button {
+    display: none;
+}
+
+li.subCatMobile {
+    font-size: 0.7em;
+    margin: 0px 0px 0px 20px;
+}
+
+svg {
+    fill: #fff;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile{
+        display: none !important;
+    }
+    li.menu-button {
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar{
+        width: 100% !important;
+    }
+    li.menu-button {
+        display: block;
+    }
+}
+
+/* ------- fin responsive navbar ------- */

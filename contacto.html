@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityTrek BA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="header-footer.js"></script>
+</head>
+
+<body>
+    <div class="header-container"></div>
+
+    <!------------------------- contact ------------------------->
+    <div id="contactpage">
+        <div id="title">
+            <h2>Contáctanos</h2>
+        </div>
+
+        <div id="formulario">
+            <!-- <form action="data/show-data.html" target="_blank"> -->
+            <form id="form" name="contacto" action="https://formspree.io/f/xeqbvvpy" method="POST">
+                <fieldset>
+                    <label for="contactname">Nombre</label>
+                    <input size="30" type="text" name="firstname" placeholder="Escriba su nombre aquí."
+                        required><br><br>
+
+                    <label for="contactemail">Email</label>
+                    <input type="text" name="contactemail" placeholder="sunombre@mail.com" id="contactemail"
+                        required><br>
+                    <span id="error" style="color: red; display: none;">Por favor, introduzca una dirección de correo
+                        electrónico válida.</span><br><br>
+
+                    <label for="contactemail">Compañía/Organización</label>
+                    <input type="text" name="zipcode"
+                        placeholder="La organización o compañía a la que pertenece aquí..."><br><br>
+
+                    <label for="comentarios">Mensaje</label>
+                    <textarea placeholder="Escriba su mensaje aquí." required name="comentarios" rows="5"
+                        cols="30"></textarea><br><br>
+
+                    <button id="validateButton">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+        <!------------------------------->
+
+        <!--------------- sidebar -------------->
+        <div id="sidebar">
+            <!----- social media -->
+            <ul>
+                <li>
+                    <a href="" target="_blank"><img src="img\insta.png" alt="Instagram"></a>
+                    <a href="" target="_blank"><img src="img\twitter.png" alt="Twitter"></a>
+                    <a href="" target="_blank"><img src="img\facebook.png" alt="Facebook"></a>
+                </li>
+                <!----- direccion ---->
+                <li>
+                    <b>CityTrek BA</b> <br />
+                    Address 1234, Comuna Name<br />
+                    Buenos Aires, Argentina.
+                </li>
+                <!----- correo electronico y telefono--->
+                <li>
+                    citytrek_ba@citytrek.com.ar<br />
+                    +549 11 555 5555
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-container"></div>
+
+    <script src="js/contacto.js"></script>
+    <script src="js/sidebar.js"></script>
+
+</body>
+
+</html>

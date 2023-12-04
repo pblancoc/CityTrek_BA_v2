@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityTrek BA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="header-footer.js"></script>
+</head>
+
+<body>
+    <div class="header-container"></div>
+
+    <main id="app">
+        <h1>{{ nombre }}</h1>
+        <ul>
+            <li v-for="dato in datos" v-if="dato.valor ">
+                {{ dato.nombre }} : 
+                <span v-if="dato.nombre === 'E-Mail' || dato.nombre === 'E-mail' || dato.nombre === 'Página WEB' || dato.nombre === 'Redes Sociales'" v-html="dato.valor"></span>
+                <span v-else>{{ dato.valor }}</span>
+            </li>
+        </ul>
+
+        <div class="Iframemaps">
+            <iframe :src="mapa" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>   
+
+        <div class="comentarios-section">
+            <h2>Comentarios</h2>
+    
+            <!-- Formulario para agregar un comentario -->
+            <div class="agregar-comentario">
+                <h3 v-if="esAgregar">Agregar Comentario</h3>
+                <h3 v-else>Editar Comentario</h3>
+
+                <input type="text" v-model="nuevoComentario.usuario" placeholder="Usuario" :disabled="!esAgregar">
+                <textarea v-model="nuevoComentario.comentario" placeholder="Comentario"></textarea>
+                <input type="number" v-model="nuevoComentario.puntuacion" placeholder="Puntuación">
+
+                <!-- Botón "Agregar" -->
+                <button v-if="esAgregar" @click="enviarComentario">Agregar</button>
+                
+                <!-- Botones "Modificar" y "Cancelar" -->
+                <div v-else>
+                    <button @click="modificarComentario">Modificar</button>
+                    <button @click="cancelar">Cancelar</button>
+                </div>                
+                <hr>
+            </div>
+    
+            <!-- Lista de comentarios -->
+            <div class="lista-comentarios">
+                <div v-for="comentario in getComentarios.comentarios">
+                    <div>
+                        <strong>Usuario: {{ comentario.usuario }}</strong>
+                        <span>Fecha: {{ comentario.fecha_hora }}</span>
+                        <p>Comentario: {{ comentario.comentario }}</p>
+                        <p>Puntuación: {{ comentario.puntuacion }}</p>
+                    </div>
+                    <div>
+                        <button @click="editarComentario(comentario)">Editar</button>
+                        <button @click="eliminarComentario(comentario.id)">Eliminar</button>
+                    </div> 
+                    <hr>
+                </div>
+            </div>
+        </div>        
+    </main>
+
+    <div class="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="datosLugar.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>
