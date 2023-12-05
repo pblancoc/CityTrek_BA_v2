@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityTrek BA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="header-footer.js"></script>
+</head>
+
+<body>
+    <div class="header-container"></div>
+
+    <main id="app">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Menú desplegable -->
+                    <select v-model="opcion" @change="getRanking" class="form-select mb-3" aria-label="Default select example">
+                        <option value="">Seleccionar opción</option>
+                        <option value="gastronomia">Top Gastronomía</option>
+                        <option value="museo">Top Museo</option>
+                        <option value="entretenimiento">Top Entretenimiento</option>
+                        <option value="sitios_interes">Top Sitios de Interés</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Tabla con Bootstrap -->
+                    <table v-if="lugares.length > 0" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Lugar</th>
+                                <th scope="col">Puntuación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(lugar, index) in lugaresMapeados" :key="index">
+                                <th scope="row">{{ index + 1 }}</th>
+                                <td>{{ lugar.lugar_id }}</td>
+                                <td>{{ lugar.puntuacion_promedio }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div v-else>
+                        <p>No hay datos para mostrar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="ranking.js"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>
