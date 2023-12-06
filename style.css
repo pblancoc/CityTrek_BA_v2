@@ -294,9 +294,9 @@ footer {
 
 /*Botones de listado telefonos */
 button{
-    font-size: 1.15em;
+    font-size: 0.8em;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 4px 21px;
     border-radius: 5px;
     border: 2px solid rgba(0,0,0,0.3);
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
@@ -383,6 +383,7 @@ button:hover{
     width: 97%;
     display: flex;
     font-family: quicksand;
+    border-radius: 5px;
 }
 
 fieldset {
@@ -506,6 +507,12 @@ svg {
     li.menu-button {
         display: block;
     }
+    .comment-icons {
+        display: grid;
+    }
+    .comment-icons img {
+        margin: 5px 0px;
+    }
 }
 
 @media(max-width: 400px) {
@@ -515,6 +522,59 @@ svg {
     li.menu-button {
         display: block;
     }
+
 }
 
 /* ------- fin responsive navbar ------- */
+
+/*------- comentarios -------------*/
+.comentarios-section {
+    width: 65vw;
+    padding: 1vw 13vw;
+}
+
+.lista-comentarios img {
+    width: 20px;
+    cursor: pointer;
+}
+.lista-comentarios {
+    background-color: #ffffff59;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px 0px 0px 0px;
+}
+.comment-styling {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border-bottom: 1px solid;
+    align-content: center;
+    justify-content: center;
+    margin: 1% 2%;
+    align-items: start;
+}
+
+.comment-icons {
+    position: relative;
+    left: 11vw;
+
+}
+
+input[type="number"], input[type="text"] {
+    border-radius: 5px;
+    border:#FFF;
+    padding: 5px;
+}
+
+.agregar-comentario {
+    background-color: #ffffff59;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;}
+
+.agregar-comentario h3 {
+    padding: 10px 0px;
+}
+
+.comentarios-section hr {
+    border:1px solid #fff;
+}
