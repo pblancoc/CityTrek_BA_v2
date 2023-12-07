@@ -578,3 +578,42 @@ input[type="number"], input[type="text"] {
 .comentarios-section hr {
     border:1px solid #fff;
 }
+
+
+/*------- comentarios -------------*/
+
+.row{
+    margin: 50px auto;
+    width: 600px;
+}
+
+table{
+    background-color: #3498DB ;
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+        
+}
+
+tr:nth-child(even){
+    background-color: #A9CCE3;
+}
+
+tr:hover td{
+    background-color: blue;
+    color: #7FB3D5;
+
+}
+
+td,th{
+    padding: 20px;
+}
+
+thead{
+    background-color: blue;
+    border-bottom: solid 5px blue;
+    color: white;
+}
+
+
+
