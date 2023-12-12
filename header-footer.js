@@ -13,6 +13,7 @@ const header = `
                 <li class="subCatMobile"><a href="lugares.html?categoria=Sitios_de_Interes">Sitios de Interes</a></li>
                 <li class="subCatMobile"><a href="lugares.html?categoria=Entretenimiento">Entretenimiento</a></li>
         </li>
+        <li><a href="servicios.html">Servicios</a></li>
         <li><a href="telefonos.html">Teléfonos Útiles</a></li>
         <li><a href="ranking.html">Ranking</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -30,6 +31,7 @@ const header = `
                     <li><a href="lugares.html?categoria=Entretenimiento">Entretenimiento</a></li>
                 </ul>
             </li>
+            <li><a class="hideOnMobile" href="servicios.html">Servicios</a></li>
             <li class="hideOnMobile"><a href="telefonos.html">Teléfonos Útiles</a></li>
             <li class="hideOnMobile"><a href="ranking.html">Ranking</a></li>
             <li class="hideOnMobile"><a href="contacto.html">Contacto</a></li>
