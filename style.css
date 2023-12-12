@@ -240,11 +240,12 @@ footer {
     line-height: 1.5; /* Espacio entre líneas */
     color: #FFF; /* Color de texto */
     margin-bottom: 20px; /* Espacio inferior entre párrafos */
-    padding-left: 10px;
+    padding-left: 40px;
 }
 
 .integrantes {
-    padding-left: 10px;
+    padding-left: 40px;
+    padding-bottom: 10px;
 }
 
 .lista {
@@ -253,6 +254,7 @@ footer {
 
 .integrante {
     color: #FFF;
+    padding: 0px 40px 10px 40px;
 }
 
 /* Estilos responsivos para pantallas pequeñas (celulares) */
