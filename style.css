@@ -16,7 +16,7 @@ h1,h2,h3{
 }
 
 h1{
-    font-size: 50px; 
+    font-size: 3em; 
     white-space: pre-wrap;   
     text-align: center;
 }
@@ -513,6 +513,12 @@ svg {
     .comment-icons img {
         margin: 5px 0px;
     }
+    .place {
+        display: grid;
+        grid-template-columns: none !important;
+
+
+    }
 }
 
 @media(max-width: 400px) {
@@ -529,8 +535,9 @@ svg {
 
 /*------- comentarios -------------*/
 .comentarios-section {
-    width: 65vw;
-    padding: 1vw 13vw;
+    /*width: 65vw;*/
+    padding: 2vw 16vw;
+    background-color: #ffffff2f;
 }
 
 .lista-comentarios img {
@@ -551,6 +558,7 @@ svg {
     justify-content: center;
     margin: 1% 2%;
     align-items: start;
+    line-height: 150%;
 }
 
 .comment-icons {
@@ -707,4 +715,28 @@ thead{
     text-justify: justify;
     font-size: 17px;
 
+}
+/*------- comentarios -------------*/
+.comentarios-section {
+    padding: 2vw 16vw;
+    background-color: #ffffff2f;
+
+}
+
+/*-------------- place ---------------*/
+.place {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+.place_data, .Iframemaps {
+    padding: 30px 40px;
+}
+
+.place ul {
+    list-style-type: none;
+}
+
+#app h1 {
+padding: 20px 0px;
+background-color: #ffffff2f;
 }
