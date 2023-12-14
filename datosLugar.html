@@ -17,18 +17,20 @@
 
     <main id="app">
         <h1>{{ nombre }}</h1>
-        <ul>
-            <li v-for="dato in datos" v-if="dato.valor ">
-                {{ dato.nombre }} : 
-                <span v-if="dato.nombre === 'E-Mail' || dato.nombre === 'E-mail' || dato.nombre === 'Página WEB' || dato.nombre === 'Redes Sociales'" v-html="dato.valor"></span>
-                <span v-else>{{ dato.valor }}</span>
-            </li>
-        </ul>
-
+        <div class="place">
+            <div class="place_data">
+            <ul>
+                <li v-for="dato in datos" v-if="dato.valor ">
+                    {{ dato.nombre }} : 
+                    <span v-if="dato.nombre === 'E-Mail' || dato.nombre === 'E-mail' || dato.nombre === 'Página WEB' || dato.nombre === 'Redes Sociales'" v-html="dato.valor"></span>
+                    <span v-else>{{ dato.valor }}</span>
+                </li>
+            </ul>
+            </div>
         <div class="Iframemaps">
             <iframe :src="mapa" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>   
-
+</div>
         <div class="comentarios-section">
             <h2>Comentarios</h2>
     
