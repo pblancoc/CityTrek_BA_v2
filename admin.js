@@ -56,6 +56,7 @@ new Vue({
                             let descripcion = tabla_nombres.find(desc => desc.id === item.lugar_id);
                             //let puntuacionFormateada = parseFloat(item.puntuacion_promedio).toFixed(1);
                             return {
+                                id: item.id,
                                 lugar_id: descripcion ? descripcion.nombre : item.lugar_id,
                                 usuario: item.usuario,
                                 comentario: item.comentario,
