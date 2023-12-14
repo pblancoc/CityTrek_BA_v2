@@ -13,9 +13,9 @@ const header = `
                 <li class="subCatMobile"><a href="lugares.html?categoria=Sitios_de_Interes">Sitios de Interes</a></li>
                 <li class="subCatMobile"><a href="lugares.html?categoria=Entretenimiento">Entretenimiento</a></li>
         </li>
-        <li><a href="servicios.html">Servicios</a></li>
         <li><a href="telefonos.html">Teléfonos Útiles</a></li>
         <li><a href="ranking.html">Ranking</a></li>
+        <li><a href="admin.html">Admin</a></li>
         <li><a href="contacto.html">Contacto</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
     </ul>
@@ -31,9 +31,9 @@ const header = `
                     <li><a href="lugares.html?categoria=Entretenimiento">Entretenimiento</a></li>
                 </ul>
             </li>
-            <li><a class="hideOnMobile" href="servicios.html">Servicios</a></li>
             <li class="hideOnMobile"><a href="telefonos.html">Teléfonos Útiles</a></li>
             <li class="hideOnMobile"><a href="ranking.html">Ranking</a></li>
+            <li class="hideOnMobile"><a href="admin.html">Admin</a></li>
             <li class="hideOnMobile"><a href="contacto.html">Contacto</a></li>
             <li class="hideOnMobile"><a href="nosotros.html">Nosotros</a></li>
             <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>

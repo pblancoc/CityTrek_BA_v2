@@ -17,21 +17,17 @@
 
     <main id="app">
         <h1>{{ nombre }}</h1>
-        <div class="place">
-            <div class="place_data">
-            <ul>
-                <li v-for="dato in datos" v-if="dato.valor ">
-                    {{ dato.nombre }} : 
-                    <span v-if="dato.nombre === 'E-Mail' || dato.nombre === 'E-mail' || dato.nombre === 'Página WEB' || dato.nombre === 'Redes Sociales'" v-html="dato.valor"></span>
-                    <span v-else>{{ dato.valor }}</span>
-                </li>
-            </ul>
-            </div>
+        <ul>
+            <li v-for="dato in datos" v-if="dato.valor ">
+                {{ dato.nombre }} : 
+                <span v-if="dato.nombre === 'E-Mail' || dato.nombre === 'E-mail' || dato.nombre === 'Página WEB' || dato.nombre === 'Redes Sociales'" v-html="dato.valor"></span>
+                <span v-else>{{ dato.valor }}</span>
+            </li>
+        </ul>
 
-            <div class="Iframemaps">
-                <iframe :src="mapa" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>   
-         </div>
+        <div class="Iframemaps">
+            <iframe :src="mapa" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>   
 
         <div class="comentarios-section">
             <h2>Comentarios</h2>
@@ -58,18 +54,20 @@
     
             <!-- Lista de comentarios -->
             <div class="lista-comentarios">
-                <div v-for="comentario in getComentarios.comentarios"  class="comment-styling">
+                <div v-for="comentario in getComentarios.comentarios">
                     <div>
                         <strong>Usuario: {{ comentario.usuario }}</strong>
                         <span>Fecha: {{ comentario.fecha_hora }}</span>
                         <p>Comentario: {{ comentario.comentario }}</p>
                         <p>Puntuación: {{ comentario.puntuacion }}</p>
                     </div>
-                    <div class="comment-icons">
-                        <img src="img/icons/edit.png" @click="editarComentario(comentario)"/>
-                        <img src="img/icons/delete.png" @click="eliminarComentario(comentario.id)"/>
+                    <!--
+                    <div>
+                        <button @click="editarComentario(comentario)">Editar</button>
+                        <button @click="eliminarComentario(comentario.id)">Eliminar</button>
                     </div> 
-                    <!---<hr>--->
+                    -->
+                    <hr>
                 </div>
             </div>
         </div>        
